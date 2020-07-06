@@ -2,8 +2,6 @@ package converter.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.Arrays;
-
 class CurrencyResponse {
     @JsonProperty("table")
     private String table;
@@ -14,13 +12,19 @@ class CurrencyResponse {
     @JsonProperty("rates")
     private CurrencyRates[] rates;
 
-    @Override
-    public String toString() {
-        return "CurrencyResponse{" +
-                "table='" + table + '\'' +
-                ", currency='" + currency + '\'' +
-                ", code='" + code + '\'' +
-                ", rates=" + Arrays.toString(rates) +
-                '}';
+    public String getTable() {
+        return table;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public CurrencyRates[] getRates() {
+        return rates;
     }
 }

@@ -10,12 +10,15 @@ class CurrencyRates {
     @JsonProperty("mid")
     private Double mid;
 
-    @Override
-    public String toString() {
-        return "CurrencyRates{" +
-                "no='" + no + '\'' +
-                ", effectiveDate='" + effectiveDate + '\'' +
-                ", mid=" + mid +
-                '}';
+    public String getNo() {
+        return no;
+    }
+
+    public String getEffectiveDate() {
+        return effectiveDate;
+    }
+
+    public Double getMid() {
+        return mid;
     }
 }
