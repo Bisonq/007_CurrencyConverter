@@ -50,7 +50,7 @@ public class Converter {
         return currencyResponseBuilder.getRate();
     }
 
-    public String getCurrencyCountry(CurrencySymbol symbol) {
+    public String getCurrencyName(CurrencySymbol symbol) {
         this.request = new CurrencyRequest();
         HttpResponse<String> response = request.sendRequest(symbol);
         if (response.statusCode() == 404)

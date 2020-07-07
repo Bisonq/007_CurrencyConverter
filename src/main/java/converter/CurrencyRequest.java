@@ -15,6 +15,8 @@ class CurrencyRequest {
     }
 
     protected HttpResponse<String> sendRequest(CurrencySymbol currencySymbol) {
+        if(currencySymbol == null)
+            throw new IllegalArgumentException("Currency symbol is null");
         try {
             String currency = currencySymbol.toString();
             return this.httpClient.send(HttpRequest.newBuilder()
